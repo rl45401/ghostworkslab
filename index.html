@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ghostworks Lab builds fan-made custom prop electronics with paranormal workshop energy.">
+  <title>Ghostworks Lab | Custom Prop Electronics</title>
+  <style>
+    :root {
+      --cream: #fff4d7;
+      --cream-2: #f8e7b9;
+      --ink: #111313;
+      --ink-soft: #242828;
+      --red: #df2b1f;
+      --red-dark: #a91f18;
+      --slime: #78d423;
+      --slime-dark: #2f7d12;
+      --white: #fffdf4;
+      --shadow: 0 18px 45px rgba(17, 19, 19, 0.22);
+      --radius: 8px;
+      --max-width: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      background:
+        radial-gradient(circle at 18% 12%, rgba(120, 212, 35, 0.24), transparent 26rem),
+        radial-gradient(circle at 86% 6%, rgba(223, 43, 31, 0.18), transparent 24rem),
+        linear-gradient(180deg, var(--cream), #f3d99f 58%, var(--cream));
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 3px solid var(--ink);
+      background: rgba(255, 244, 215, 0.94);
+      backdrop-filter: blur(14px);
+    }
+
+    .nav {
+      width: min(100% - 32px, var(--max-width));
+      margin: 0 auto;
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand-mark {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+      font-weight: 900;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .brand-mark img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+    }
+
+    .brand-mark span {
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav-links a {
+      padding: 8px 10px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      color: var(--white);
+      background: var(--ink);
+      outline: none;
+    }
+
+    .section {
+      padding: 84px 0;
+    }
+
+    .wrap {
+      width: min(100% - 32px, var(--max-width));
+      margin: 0 auto;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      min-height: calc(100svh - 74px);
+      display: grid;
+      align-items: center;
+      border-bottom: 4px solid var(--ink);
+      background:
+        linear-gradient(135deg, rgba(17, 19, 19, 0.94), rgba(17, 19, 19, 0.76)),
+        repeating-linear-gradient(-12deg, rgba(255, 244, 215, 0.12) 0 2px, transparent 2px 18px);
+      color: var(--white);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: auto -12% -30% auto;
+      width: 58vw;
+      max-width: 720px;
+      aspect-ratio: 1;
+      border: clamp(24px, 5vw, 54px) solid var(--red);
+      border-radius: 50%;
+      transform: rotate(-16deg);
+      opacity: 0.88;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: 7%;
+      bottom: 10%;
+      width: 18%;
+      min-width: 140px;
+      max-width: 250px;
+      height: 26px;
+      border: 3px solid var(--ink);
+      border-radius: 999px;
+      background: var(--slime);
+      box-shadow: 0 0 34px rgba(120, 212, 35, 0.75);
+      transform: rotate(-9deg);
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(240px, 0.9fr);
+      align-items: center;
+      gap: clamp(32px, 6vw, 72px);
+      padding: 64px 0;
+    }
+
+    .hero-logo {
+      width: min(340px, 76vw);
+      filter: drop-shadow(0 22px 35px rgba(0, 0, 0, 0.42));
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin: 0 0 18px;
+      color: var(--slime);
+      font-size: 0.82rem;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 11px;
+      height: 11px;
+      border: 2px solid var(--white);
+      border-radius: 50%;
+      background: var(--slime);
+      box-shadow: 0 0 18px var(--slime);
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      max-width: 760px;
+      margin-bottom: 22px;
+      font-size: clamp(3rem, 9vw, 6.9rem);
+      line-height: 0.88;
+      letter-spacing: 0;
+      text-transform: uppercase;
+      text-wrap: balance;
+    }
+
+    h2 {
+      margin-bottom: 16px;
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      line-height: 1;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+      font-size: 1.24rem;
+      line-height: 1.2;
+    }
+
+    .hero-copy {
+      max-width: 620px;
+      color: rgba(255, 253, 244, 0.88);
+      font-size: clamp(1.05rem, 2vw, 1.28rem);
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 12px 18px;
+      border: 3px solid var(--ink);
+      border-radius: var(--radius);
+      box-shadow: 5px 5px 0 var(--ink);
+      font-weight: 900;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: transform 160ms ease, box-shadow 160ms ease;
+    }
+
+    .button:hover,
+    .button:focus-visible {
+      transform: translate(2px, 2px);
+      box-shadow: 3px 3px 0 var(--ink);
+      outline: none;
+    }
+
+    .button.primary {
+      color: var(--white);
+      background: var(--red);
+    }
+
+    .button.secondary {
+      color: var(--ink);
+      background: var(--slime);
+    }
+
+    .button.ghost {
+      color: var(--white);
+      border-color: var(--white);
+      box-shadow: 5px 5px 0 var(--red);
+      background: transparent;
+    }
+
+    .section-intro {
+      max-width: 760px;
+      margin-bottom: 34px;
+      font-size: 1.08rem;
+    }
+
+    .product {
+      border-top: 4px solid var(--ink);
+      border-bottom: 4px solid var(--ink);
+      background: var(--white);
+    }
+
+    .product.alt {
+      background: var(--ink);
+      color: var(--white);
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 0.85fr);
+      gap: clamp(28px, 5vw, 62px);
+      align-items: center;
+    }
+
+    .product.alt .product-grid {
+      grid-template-columns: minmax(280px, 0.85fr) minmax(0, 1fr);
+    }
+
+    .lab-panel {
+      position: relative;
+      overflow: hidden;
+      min-height: 340px;
+      border: 4px solid var(--ink);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      background:
+        radial-gradient(circle at 20% 22%, rgba(120, 212, 35, 0.75), transparent 0 13%, transparent 14%),
+        linear-gradient(135deg, var(--cream), var(--cream-2));
+    }
+
+    .product.alt .lab-panel {
+      border-color: var(--cream);
+      background:
+        radial-gradient(circle at 72% 28%, rgba(223, 43, 31, 0.7), transparent 0 14%, transparent 15%),
+        linear-gradient(135deg, #1c2020, #3a3324);
+    }
+
+    .device-plate {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: min(72%, 360px);
+      aspect-ratio: 4 / 3;
+      transform: translate(-50%, -50%) rotate(-4deg);
+      border: 5px solid var(--ink);
+      border-radius: 8px;
+      background:
+        linear-gradient(90deg, transparent 0 38%, rgba(17, 19, 19, 0.1) 38% 42%, transparent 42%),
+        linear-gradient(180deg, #efe5c2, #b9aa80);
+      box-shadow: 10px 12px 0 rgba(17, 19, 19, 0.28);
+    }
+
+    .product.alt .device-plate {
+      border-color: var(--cream);
+      transform: translate(-50%, -50%) rotate(5deg);
+      background:
+        repeating-linear-gradient(90deg, #191c1c 0 18px, #343a36 18px 28px),
+        linear-gradient(180deg, #202424, #151717);
+      box-shadow: 10px 12px 0 rgba(248, 231, 185, 0.18);
+    }
+
+    .device-plate::before,
+    .device-plate::after {
+      content: "";
+      position: absolute;
+      border: 4px solid var(--ink);
+      border-radius: 999px;
+      background: var(--slime);
+      box-shadow: 0 0 24px rgba(120, 212, 35, 0.8);
+    }
+
+    .device-plate::before {
+      left: 12%;
+      top: 18%;
+      width: 22%;
+      aspect-ratio: 1;
+    }
+
+    .device-plate::after {
+      right: 12%;
+      bottom: 16%;
+      width: 44%;
+      height: 18%;
+      background: var(--red);
+      box-shadow: none;
+    }
+
+    .feature-list {
+      display: grid;
+      gap: 12px;
+      margin: 26px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .feature-list li {
+      position: relative;
+      padding-left: 30px;
+      font-weight: 750;
+    }
+
+    .feature-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.46em;
+      width: 14px;
+      height: 14px;
+      border: 3px solid currentColor;
+      border-radius: 50%;
+      background: var(--slime);
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 24px;
+    }
+
+    .tag {
+      border: 2px solid currentColor;
+      border-radius: 999px;
+      padding: 5px 10px;
+      font-size: 0.82rem;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .gallery {
+      background:
+        linear-gradient(rgba(255, 244, 215, 0.88), rgba(255, 244, 215, 0.88)),
+        repeating-linear-gradient(90deg, transparent 0 46px, rgba(17, 19, 19, 0.1) 46px 49px);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .photo-card {
+      overflow: hidden;
+      border: 3px solid var(--ink);
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: 5px 5px 0 var(--ink);
+    }
+
+    .photo-placeholder {
+      position: relative;
+      display: grid;
+      place-items: center;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      background:
+        repeating-linear-gradient(-45deg, transparent 0 14px, rgba(17, 19, 19, 0.08) 14px 17px),
+        linear-gradient(135deg, rgba(120, 212, 35, 0.34), transparent),
+        var(--cream-2);
+    }
+
+    .photo-placeholder::before {
+      content: "";
+      width: 54px;
+      height: 54px;
+      border: 4px solid var(--ink);
+      border-radius: 50%;
+      background: var(--red);
+      box-shadow: inset 0 0 0 14px var(--cream), 0 0 0 9px rgba(120, 212, 35, 0.42);
+    }
+
+    .photo-card figcaption {
+      margin: 0;
+      padding: 12px;
+      border-top: 3px solid var(--ink);
+      font-size: 0.88rem;
+      font-weight: 850;
+      word-break: break-word;
+    }
+
+    .order {
+      color: var(--white);
+      background:
+        linear-gradient(135deg, rgba(17, 19, 19, 0.96), rgba(17, 19, 19, 0.9)),
+        repeating-linear-gradient(45deg, rgba(120, 212, 35, 0.18) 0 4px, transparent 4px 18px);
+    }
+
+    .order-card {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 28px;
+      padding: clamp(24px, 4vw, 44px);
+      border: 4px solid var(--cream);
+      border-radius: var(--radius);
+      background: rgba(255, 253, 244, 0.06);
+      box-shadow: var(--shadow);
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .step {
+      min-height: 128px;
+      padding: 18px;
+      border: 2px solid rgba(255, 253, 244, 0.42);
+      border-radius: var(--radius);
+      background: rgba(255, 253, 244, 0.08);
+    }
+
+    .step strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--slime);
+      text-transform: uppercase;
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    details {
+      border: 3px solid var(--ink);
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: 4px 4px 0 var(--ink);
+    }
+
+    summary {
+      cursor: pointer;
+      padding: 18px;
+      font-weight: 900;
+      list-style-position: inside;
+    }
+
+    details p {
+      margin: 0;
+      padding: 0 18px 18px;
+    }
+
+    .site-footer {
+      padding: 38px 0;
+      border-top: 4px solid var(--ink);
+      color: var(--white);
+      background: var(--ink);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .disclaimer {
+      max-width: 850px;
+      color: rgba(255, 253, 244, 0.78);
+      font-size: 0.95rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: flex-end;
+    }
+
+    .footer-links a {
+      color: var(--slime);
+      font-weight: 850;
+      text-decoration: none;
+    }
+
+    .footer-links a:hover,
+    .footer-links a:focus-visible {
+      text-decoration: underline;
+      outline: none;
+    }
+
+    @media (max-width: 860px) {
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+        padding: 12px 0;
+      }
+
+      .nav-links {
+        justify-content: flex-start;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-grid,
+      .product-grid,
+      .product.alt .product-grid,
+      .order-card,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-logo {
+        width: min(280px, 70vw);
+      }
+
+      .gallery-grid,
+      .faq-grid,
+      .steps {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .footer-links {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .section {
+        padding: 58px 0;
+      }
+
+      .brand-mark span {
+        white-space: normal;
+      }
+
+      .nav-links a {
+        padding-left: 0;
+      }
+
+      h1 {
+        font-size: clamp(2.65rem, 18vw, 4.1rem);
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .gallery-grid,
+      .faq-grid,
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      .lab-panel {
+        min-height: 260px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header" aria-label="Site header">
+    <nav class="nav">
+      <a class="brand-mark" href="#top" aria-label="Ghostworks Lab home">
+        <img src="logo.png" alt="Ghostworks Lab logo">
+        <span>Ghostworks Lab</span>
+      </a>
+      <div class="nav-links" aria-label="Primary navigation">
+        <a href="#pocket">Pocket</a>
+        <a href="#belt">Belt</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#custom">Custom Orders</a>
+        <a href="#faq">FAQ</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="eyebrow">Custom paranormal prop electronics</p>
+          <h1>Ghostworks Lab</h1>
+          <p class="hero-copy">Small-batch gizmos, blinking instruments, and lab-built electronics for collectors, cosplayers, makers, and anyone who likes their gear a little haunted.</p>
+          <div class="button-row" aria-label="Shop and order links">
+            <a class="button primary" href="https://example.com/etsy">Shop Etsy</a>
+            <a class="button secondary" href="https://example.com/ebay">Shop eBay</a>
+            <a class="button ghost" href="https://example.com/jotform">Request Custom</a>
+          </div>
+        </div>
+        <img class="hero-logo" src="logo.png" alt="Ghostworks Lab logo artwork">
+      </div>
+    </section>
+
+    <section class="section product" id="pocket">
+      <div class="wrap product-grid">
+        <div>
+          <p class="eyebrow">Pocket Gizmo</p>
+          <h2>Bench-built weird science for your jacket pocket.</h2>
+          <p class="section-intro">The Pocket Gizmo is a compact custom prop electronic designed for handheld scenes, display shelves, cosplay utility pouches, and close-up photos. Each build is made to feel like it rolled out of a paranormal repair bay.</p>
+          <ul class="feature-list">
+            <li>Compact prop electronics with animated lights and tactile controls.</li>
+            <li>Great for handheld investigating, display, or costume details.</li>
+            <li>Made in small batches with room for custom finish requests.</li>
+          </ul>
+          <div class="tag-row" aria-label="Pocket Gizmo tags">
+            <span class="tag">Handheld</span>
+            <span class="tag">Light-up</span>
+            <span class="tag">Display-ready</span>
+          </div>
+        </div>
+        <div class="lab-panel" aria-label="Stylized Pocket Gizmo illustration">
+          <div class="device-plate"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section product alt" id="belt">
+      <div class="wrap product-grid">
+        <div class="lab-panel" aria-label="Stylized Belt Gizmo illustration">
+          <div class="device-plate"></div>
+        </div>
+        <div>
+          <p class="eyebrow">Belt Gizmo</p>
+          <h2>Clip-on equipment for full workshop mode.</h2>
+          <p class="section-intro">The Belt Gizmo brings the same lab-made personality in a wearable format. It is built for utility belt layouts, convention floor durability, and quick visual impact when your costume needs extra circuitry.</p>
+          <ul class="feature-list">
+            <li>Wearable prop format for belts, straps, and equipment rigs.</li>
+            <li>Designed around bold lights, switches, and characterful details.</li>
+            <li>Custom colors, aging, and control layouts available by request.</li>
+          </ul>
+          <div class="tag-row" aria-label="Belt Gizmo tags">
+            <span class="tag">Wearable</span>
+            <span class="tag">Customizable</span>
+            <span class="tag">Convention-friendly</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section gallery" id="gallery">
+      <div class="wrap">
+        <p class="eyebrow">Photo Gallery</p>
+        <h2>Product shots go here.</h2>
+        <p class="section-intro">Replace these placeholder filenames with your final photos when you are ready. Keep the same file names for the easiest update, or edit the image paths directly in this section.</p>
+        <div class="gallery-grid">
+          <figure class="photo-card">
+            <div class="photo-placeholder" role="img" aria-label="Pocket Gizmo front view placeholder"></div>
+            <figcaption>pocket-gizmo-front.jpg</figcaption>
+          </figure>
+          <figure class="photo-card">
+            <div class="photo-placeholder" role="img" aria-label="Pocket Gizmo detail view placeholder"></div>
+            <figcaption>pocket-gizmo-detail.jpg</figcaption>
+          </figure>
+          <figure class="photo-card">
+            <div class="photo-placeholder" role="img" aria-label="Belt Gizmo front view placeholder"></div>
+            <figcaption>belt-gizmo-front.jpg</figcaption>
+          </figure>
+          <figure class="photo-card">
+            <div class="photo-placeholder" role="img" aria-label="Belt Gizmo worn view placeholder"></div>
+            <figcaption>belt-gizmo-worn.jpg</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section order" id="custom">
+      <div class="wrap order-card">
+        <div>
+          <p class="eyebrow">Custom Orders</p>
+          <h2>Need a special build?</h2>
+          <p class="section-intro">Send a request with the prop type, finish, colors, preferred controls, deadline, and any reference notes. After the details are reviewed, you will receive a custom quote and a PayPal invoice before work begins.</p>
+          <div class="steps" aria-label="Custom order process">
+            <div class="step">
+              <strong>1. Submit</strong>
+              Share your build request and contact details.
+            </div>
+            <div class="step">
+              <strong>2. Quote</strong>
+              Get a price, timeline, and PayPal invoice.
+            </div>
+            <div class="step">
+              <strong>3. Build</strong>
+              Your custom prop electronics go to the workbench.
+            </div>
+          </div>
+        </div>
+        <div class="button-row">
+          <a class="button secondary" href="https://example.com/jotform">Start Request</a>
+          <a class="button ghost" href="mailto:hello@example.com">Email Us</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="wrap">
+        <p class="eyebrow">FAQ</p>
+        <h2>Workshop notes.</h2>
+        <div class="faq-grid">
+          <details>
+            <summary>Are these ready to ship?</summary>
+            <p>Some items may be ready-made, while custom pieces are built after the quote and invoice are approved. Product listings will include the current timing.</p>
+          </details>
+          <details>
+            <summary>Can I request custom colors or weathering?</summary>
+            <p>Yes. Use the custom order form to describe the finish, colors, aging level, and any special display or costume needs.</p>
+          </details>
+          <details>
+            <summary>Do these props include sound or lights?</summary>
+            <p>Available features vary by build. Common options include blinking LEDs, switches, knobs, battery-powered lighting, and other prop-style electronics.</p>
+          </details>
+          <details>
+            <summary>How do PayPal invoices work?</summary>
+            <p>After your request is reviewed, you will receive a PayPal invoice for the approved amount. Work begins once the invoice is paid.</p>
+          </details>
+          <details>
+            <summary>Are these toys or safety equipment?</summary>
+            <p>No. These are custom fan-made prop electronics for display, cosplay, and collecting. They are not tools, safety devices, or equipment for real paranormal investigation.</p>
+          </details>
+          <details>
+            <summary>Where can I buy available items?</summary>
+            <p>Use the Etsy and eBay placeholder buttons on this page, then replace those links with your actual storefront URLs when the site is ready.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <strong>Ghostworks Lab</strong>
+        <p class="disclaimer">Disclaimer: Ghostworks Lab items are fan-made custom prop electronics. They are not affiliated with, endorsed by, sponsored by, or licensed by any official franchise entity, studio, rights holder, or trademark owner.</p>
+      </div>
+      <div class="footer-links" aria-label="Footer links">
+        <a href="https://example.com/etsy">Etsy</a>
+        <a href="https://example.com/ebay">eBay</a>
+        <a href="https://example.com/jotform">Custom Form</a>
+        <a href="mailto:hello@example.com">Email</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
