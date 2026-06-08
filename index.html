@@ -512,6 +512,24 @@
       text-transform: uppercase;
     }
 
+    .form-embed {
+      grid-column: 1 / -1;
+      overflow: hidden;
+      border: 4px solid var(--cream);
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: 8px 8px 0 var(--red);
+    }
+
+    .form-embed iframe {
+      display: block;
+      width: 100%;
+      min-width: 100%;
+      max-width: 100%;
+      height: 539px;
+      border: 0;
+    }
+
     .faq-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -675,7 +693,7 @@
           <div class="button-row" aria-label="Shop and order links">
             <a class="button primary" href="https://pixelandpatchworkus.etsy.com">Shop Etsy</a>
             <a class="button secondary" href="https://www.ebay.com/usr/ghostworkslab">Shop eBay</a>
-            <a class="button ghost" href="https://example.com/jotform">Request Custom</a>
+            <a class="button ghost" href="https://form.jotform.com/261587044383058">Request Custom</a>
           </div>
         </div>
         <img class="hero-logo" src="logo.png" alt="Ghostworks Lab logo artwork">
@@ -776,8 +794,19 @@
           </div>
         </div>
         <div class="button-row">
-          <a class="button secondary" href="https://example.com/jotform">Start Request</a>
+          <a class="button secondary" href="https://form.jotform.com/261587044383058">Start Request</a>
           <a class="button ghost" href="mailto:hello@example.com">Email Us</a>
+        </div>
+        <div class="form-embed">
+          <iframe
+            id="JotFormIFrame-261587044383058"
+            title="Ghostworks Lab Custom Gizmo Order Request"
+            onload="window.parent.scrollTo(0,0)"
+            allowtransparency="true"
+            allow="geolocation; microphone; camera; fullscreen; payment"
+            src="https://form.jotform.com/261587044383058"
+            scrolling="no">
+          </iframe>
         </div>
       </div>
     </section>
@@ -825,10 +854,14 @@
       <div class="footer-links" aria-label="Footer links">
         <a href="https://pixelandpatchworkus.etsy.com">Etsy</a>
         <a href="https://www.ebay.com/usr/ghostworkslab">eBay</a>
-        <a href="https://example.com/jotform">Custom Form</a>
+        <a href="https://form.jotform.com/261587044383058">Custom Form</a>
         <a href="mailto:hello@example.com">Email</a>
       </div>
     </div>
   </footer>
+  <script src="https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js"></script>
+  <script>
+    window.jotformEmbedHandler("iframe[id='JotFormIFrame-261587044383058']", "https://form.jotform.com/");
+  </script>
 </body>
 </html>
