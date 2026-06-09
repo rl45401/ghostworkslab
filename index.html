@@ -390,6 +390,40 @@
       box-shadow: none;
     }
 
+    .product-photo {
+      overflow: hidden;
+      margin: 0;
+      border: 4px solid var(--ink);
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .product.alt .product-photo {
+      border-color: var(--cream);
+      background: #171a1a;
+    }
+
+    .product-photo img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .product-photo figcaption {
+      margin: 0;
+      padding: 12px 14px;
+      border-top: 3px solid var(--ink);
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .product.alt .product-photo figcaption {
+      border-top-color: var(--cream);
+      color: var(--cream);
+    }
+
     .feature-list {
       display: grid;
       gap: 12px;
@@ -754,17 +788,19 @@
             <span class="tag">Display-ready</span>
           </div>
         </div>
-        <div class="lab-panel" aria-label="Stylized Pocket Gizmo illustration">
-          <div class="device-plate"></div>
-        </div>
+        <figure class="product-photo">
+          <img src="assets/rgb-pocket-gizmo-main.jpeg" alt="RGB Pocket Gizmo with multicolor lights active">
+          <figcaption>RGB Pocket Gizmo</figcaption>
+        </figure>
       </div>
     </section>
 
     <section class="section product alt" id="belt">
       <div class="wrap product-grid">
-        <div class="lab-panel" aria-label="Stylized Belt Gizmo illustration">
-          <div class="device-plate"></div>
-        </div>
+        <figure class="product-photo">
+          <img src="assets/ghostbusters-ii-inspired-belt-gizmo-main.jpeg" alt="Ghostbusters II inspired Belt Gizmo with lights active">
+          <figcaption>Ghostbusters II Inspired Belt Gizmo</figcaption>
+        </figure>
         <div>
           <p class="eyebrow">Belt Gizmo</p>
           <h2>Clip-on equipment for full workshop mode.</h2>
