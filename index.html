@@ -478,6 +478,48 @@
       background: rgba(120, 212, 35, 0.12);
     }
 
+    .board-options {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .board-card {
+      overflow: hidden;
+      border: 3px solid var(--ink);
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: 5px 5px 0 var(--ink);
+    }
+
+    .board-card img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      object-position: center;
+      background: var(--cream-2);
+    }
+
+    .board-card figcaption {
+      margin: 0;
+      padding: 12px;
+      border-top: 3px solid var(--ink);
+      font-weight: 900;
+    }
+
+    .board-card strong {
+      display: block;
+      text-transform: uppercase;
+    }
+
+    .board-card span {
+      display: block;
+      margin-top: 4px;
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
     .feature-list {
       display: grid;
       gap: 12px;
@@ -600,11 +642,17 @@
       box-shadow: 5px 5px 0 var(--ink);
     }
 
+    .photo-card a {
+      display: block;
+      color: inherit;
+      text-decoration: none;
+    }
+
     .photo-card img {
       display: block;
       width: 100%;
       aspect-ratio: 4 / 3;
-      object-fit: cover;
+      object-fit: contain;
       object-position: center;
       background: var(--cream-2);
     }
@@ -836,7 +884,8 @@
 
       .gallery-grid,
       .faq-grid,
-      .steps {
+      .steps,
+      .board-options {
         grid-template-columns: 1fr;
       }
 
@@ -911,7 +960,23 @@
               <span>$49.99</span>
             </div>
           </div>
-          <p class="stock-note">Pocket Gizmo note: Version 1 and RGB Pocket Gizmo orders may ship with either black or white Version 1 boards, depending on what is in stock at the time of order.</p>
+          <div class="board-options" aria-label="Pocket Gizmo board color options">
+            <figure class="board-card">
+              <img src="assets/pocket-gizmo-black-board.jpeg" alt="Black Pocket Gizmo board with white LEDs lit">
+              <figcaption>
+                <strong>Black board</strong>
+                <span>Customers can choose the black Version 1 board.</span>
+              </figcaption>
+            </figure>
+            <figure class="board-card">
+              <img src="assets/pocket-gizmo-white-board.jpeg" alt="White Pocket Gizmo board with white LEDs lit">
+              <figcaption>
+                <strong>White board</strong>
+                <span>Customers can choose the white Version 1 board.</span>
+              </figcaption>
+            </figure>
+          </div>
+          <p class="stock-note">Pocket Gizmo board note: Version 1 and RGB Pocket Gizmo customers can choose either the black or white Version 1 board when ordering. If a selected board color is unavailable, availability will be confirmed before invoicing.</p>
           <div class="tag-row" aria-label="Pocket Gizmo tags">
             <span class="tag">Handheld</span>
             <span class="tag">Light-up</span>
@@ -983,19 +1048,27 @@
           <h3>Pocket Gizmo</h3>
           <div class="gallery-grid">
             <figure class="photo-card">
-              <img src="assets/pocket-gizmo-in-action-01.jpeg" alt="Pocket Gizmo lit up in a red field jacket pocket">
+              <a href="assets/pocket-gizmo-in-action-01.jpeg" target="_blank" rel="noopener">
+                <img src="assets/pocket-gizmo-in-action-01.jpeg" alt="Pocket Gizmo lit up in a red field jacket pocket">
+              </a>
               <figcaption>Pocket Gizmo in action 01</figcaption>
             </figure>
             <figure class="photo-card">
-              <img src="assets/pocket-gizmo-in-action-02.jpeg" alt="Pocket Gizmo glowing on a red field jacket while worn">
+              <a href="assets/pocket-gizmo-in-action-02.jpeg" target="_blank" rel="noopener">
+                <img src="assets/pocket-gizmo-in-action-02.jpeg" alt="Pocket Gizmo glowing on a red field jacket while worn">
+              </a>
               <figcaption>Pocket Gizmo in action 02</figcaption>
             </figure>
             <figure class="photo-card">
-              <img src="assets/pocket-gizmo-in-action-03.jpeg" alt="Pocket Gizmo installed in a red jacket pocket with wiring visible">
+              <a href="assets/pocket-gizmo-in-action-03.jpeg" target="_blank" rel="noopener">
+                <img src="assets/pocket-gizmo-in-action-03.jpeg" alt="Pocket Gizmo installed in a red jacket pocket with wiring visible">
+              </a>
               <figcaption>Pocket Gizmo in action 03</figcaption>
             </figure>
             <figure class="photo-card">
-              <img src="assets/pocket-gizmo-in-action-04.jpeg" alt="Close view of the Pocket Gizmo lights active in a red jacket pocket">
+              <a href="assets/pocket-gizmo-in-action-04.jpeg" target="_blank" rel="noopener">
+                <img src="assets/pocket-gizmo-in-action-04.jpeg" alt="Close view of the Pocket Gizmo lights active in a red jacket pocket">
+              </a>
               <figcaption>Pocket Gizmo in action 04</figcaption>
             </figure>
           </div>
@@ -1004,23 +1077,33 @@
           <h3>Belt Gizmo</h3>
           <div class="gallery-grid">
             <figure class="photo-card">
-              <img src="assets/belt-gizmo-in-use-01.jpeg" alt="Belt Gizmo gear layout with lights active">
+              <a href="assets/belt-gizmo-in-use-01.jpeg" target="_blank" rel="noopener">
+                <img src="assets/belt-gizmo-in-use-01.jpeg" alt="Belt Gizmo gear layout with lights active">
+              </a>
               <figcaption>Belt Gizmo in use 01</figcaption>
             </figure>
             <figure class="photo-card">
-              <img src="assets/belt-gizmo-in-use-02.jpeg" alt="Belt Gizmo mounted with tubes and red electronics visible">
+              <a href="assets/belt-gizmo-in-use-02.jpeg" target="_blank" rel="noopener">
+                <img src="assets/belt-gizmo-in-use-02.jpeg" alt="Belt Gizmo mounted with tubes and red electronics visible">
+              </a>
               <figcaption>Belt Gizmo in use 02</figcaption>
             </figure>
             <figure class="photo-card">
-              <img src="assets/belt-gizmo-in-use-03.jpeg" alt="Close view of the Belt Gizmo red light board and green tube">
+              <a href="assets/belt-gizmo-in-use-03.jpeg" target="_blank" rel="noopener">
+                <img src="assets/belt-gizmo-in-use-03.jpeg" alt="Close view of the Belt Gizmo red light board and green tube">
+              </a>
               <figcaption>Belt Gizmo in use 03</figcaption>
             </figure>
             <figure class="photo-card">
-              <img src="assets/belt-gizmo-in-use-04.jpeg" alt="Belt Gizmo close-up with blue and pink lighting active">
+              <a href="assets/belt-gizmo-in-use-04.jpeg" target="_blank" rel="noopener">
+                <img src="assets/belt-gizmo-in-use-04.jpeg" alt="Belt Gizmo close-up with blue and pink lighting active">
+              </a>
               <figcaption>Belt Gizmo in use 04</figcaption>
             </figure>
             <figure class="photo-card">
-              <img src="assets/belt-gizmo-in-use-05.jpeg" alt="Belt Gizmo worn on a costume with lights active">
+              <a href="assets/belt-gizmo-in-use-05.jpeg" target="_blank" rel="noopener">
+                <img src="assets/belt-gizmo-in-use-05.jpeg" alt="Belt Gizmo worn on a costume with lights active">
+              </a>
               <figcaption>Belt Gizmo in use 05</figcaption>
             </figure>
           </div>
