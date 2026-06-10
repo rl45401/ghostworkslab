@@ -520,6 +520,47 @@
       text-transform: uppercase;
     }
 
+    .shipping {
+      border-bottom: 4px solid var(--ink);
+      background:
+        linear-gradient(rgba(255, 253, 244, 0.9), rgba(255, 253, 244, 0.9)),
+        repeating-linear-gradient(-12deg, rgba(223, 43, 31, 0.18) 0 5px, transparent 5px 20px);
+    }
+
+    .shipping-card {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 24px;
+      padding: clamp(22px, 4vw, 34px);
+      border: 4px solid var(--ink);
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: 8px 8px 0 var(--ink);
+    }
+
+    .shipping-price {
+      display: grid;
+      place-items: center;
+      min-width: 148px;
+      min-height: 112px;
+      padding: 14px;
+      border: 4px solid var(--ink);
+      border-radius: var(--radius);
+      color: var(--white);
+      background: var(--red);
+      box-shadow: 5px 5px 0 var(--slime);
+      font-weight: 900;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .shipping-price strong {
+      display: block;
+      font-size: clamp(2.1rem, 5vw, 3rem);
+      line-height: 1;
+    }
+
     .gallery {
       background:
         linear-gradient(rgba(255, 244, 215, 0.88), rgba(255, 244, 215, 0.88)),
@@ -730,6 +771,7 @@
       .hero-grid,
       .product-grid,
       .product.alt .product-grid,
+      .shipping-card,
       .order-card,
       .footer-grid {
         grid-template-columns: 1fr;
@@ -800,6 +842,10 @@
 
       .lab-panel {
         min-height: 260px;
+      }
+
+      .shipping-price {
+        width: 100%;
       }
     }
   </style>
@@ -909,6 +955,20 @@
             <span class="tag">Customizable</span>
             <span class="tag">Convention-friendly</span>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shipping" id="shipping">
+      <div class="wrap shipping-card">
+        <div>
+          <p class="eyebrow">Shipping</p>
+          <h2>Flat-rate shipping.</h2>
+          <p class="section-intro">A flat shipping rate of $18 is included for all orders. If multiple items are ordered at the same time, shipping may be combined when possible and reflected in the final quote or invoice.</p>
+        </div>
+        <div class="shipping-price" aria-label="Flat rate shipping price">
+          <span>Flat rate</span>
+          <strong>$18</strong>
         </div>
       </div>
     </section>
@@ -1028,6 +1088,10 @@
           <details>
             <summary>How do PayPal invoices work?</summary>
             <p>After your request is reviewed, you will receive a PayPal invoice for the approved amount. Work begins once the invoice is paid.</p>
+          </details>
+          <details>
+            <summary>How much is shipping?</summary>
+            <p>A flat shipping rate of $18 is included for all orders. If multiple items are ordered at once, shipping may be combined when possible and reflected in the final quote or invoice.</p>
           </details>
           <details>
             <summary>Are these toys or safety equipment?</summary>
