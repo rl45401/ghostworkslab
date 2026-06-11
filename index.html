@@ -1234,6 +1234,10 @@
   </footer>
   <script src="https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js"></script>
   <script>
+    if (window.location.protocol === "http:" || window.location.hostname === "ghostworkslab.com") {
+      window.location.replace("https://www.ghostworkslab.com" + window.location.pathname + window.location.search + window.location.hash);
+    }
+
     window.jotformEmbedHandler("iframe[id='JotFormIFrame-261587044383058']", "https://form.jotform.com/");
   </script>
 </body>
