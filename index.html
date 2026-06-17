@@ -622,6 +622,22 @@
       line-height: 1;
     }
 
+    .shop {
+      background:
+        linear-gradient(rgba(255, 253, 244, 0.92), rgba(255, 253, 244, 0.92)),
+        radial-gradient(circle at 15% 18%, rgba(120, 212, 35, 0.34), transparent 32%),
+        radial-gradient(circle at 84% 8%, rgba(230, 42, 43, 0.18), transparent 28%);
+    }
+
+    .shop-embed {
+      margin-top: 28px;
+      padding: clamp(16px, 3vw, 28px);
+      border: 4px solid var(--ink);
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+
     .gallery {
       background:
         linear-gradient(rgba(255, 244, 215, 0.88), rgba(255, 244, 215, 0.88)),
@@ -928,6 +944,7 @@
       <div class="nav-links" aria-label="Primary navigation">
         <a href="#pocket">Pocket</a>
         <a href="#belt">Belt</a>
+        <a href="#shop">Shop</a>
         <a href="#gallery">Gallery</a>
         <a href="#custom">Custom Orders</a>
         <a href="#faq">FAQ</a>
@@ -1064,6 +1081,20 @@
         <div class="shipping-price" aria-label="Flat rate shipping price">
           <span>Flat rate</span>
           <strong>$18</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shop" id="shop">
+      <div class="wrap">
+        <p class="eyebrow">Shop</p>
+        <h2>Ready-made gizmos and lab supplies.</h2>
+        <p class="section-intro">Browse available Ghostworks Lab items directly from the workshop store. For special requests, the custom order form is still the preferred way to start a build.</p>
+        <div class="shop-embed">
+          <div id="my-store-137811008"></div>
+          <div>
+            <script data-cfasync="false" type="text/javascript" src="https://app.ecwid.com/script.js?137811008&data_platform=code&data_date=2026-06-17" charset="utf-8"></script><script type="text/javascript">xProductBrowser("categoriesPerRow=3", "views=grid(20,3) list(60) table(60)", "categoryView=grid", "searchView=list", "id=my-store-137811008");</script>
+          </div>
         </div>
       </div>
     </section>
