@@ -463,8 +463,7 @@
       color: var(--slime);
     }
 
-    .stock-note,
-    .custom-note {
+    .stock-note {
       margin: 18px 0 0;
       padding: 14px 16px;
       border-left: 6px solid var(--red);
@@ -472,8 +471,7 @@
       font-weight: 800;
     }
 
-    .product.alt .stock-note,
-    .order .custom-note {
+    .product.alt .stock-note {
       border-left-color: var(--slime);
       background: rgba(120, 212, 35, 0.12);
     }
@@ -701,65 +699,6 @@
       word-break: break-word;
     }
 
-    .order {
-      color: var(--white);
-      background:
-        linear-gradient(135deg, rgba(17, 19, 19, 0.96), rgba(17, 19, 19, 0.9)),
-        repeating-linear-gradient(45deg, rgba(120, 212, 35, 0.18) 0 4px, transparent 4px 18px);
-    }
-
-    .order-card {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) auto;
-      align-items: center;
-      gap: 28px;
-      padding: clamp(24px, 4vw, 44px);
-      border: 4px solid var(--cream);
-      border-radius: var(--radius);
-      background: rgba(255, 253, 244, 0.06);
-      box-shadow: var(--shadow);
-    }
-
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
-      margin-top: 28px;
-    }
-
-    .step {
-      min-height: 128px;
-      padding: 18px;
-      border: 2px solid rgba(255, 253, 244, 0.42);
-      border-radius: var(--radius);
-      background: rgba(255, 253, 244, 0.08);
-    }
-
-    .step strong {
-      display: block;
-      margin-bottom: 8px;
-      color: var(--slime);
-      text-transform: uppercase;
-    }
-
-    .form-embed {
-      grid-column: 1 / -1;
-      overflow: hidden;
-      border: 4px solid var(--cream);
-      border-radius: var(--radius);
-      background: var(--white);
-      box-shadow: 8px 8px 0 var(--red);
-    }
-
-    .form-embed iframe {
-      display: block;
-      width: 100%;
-      min-width: 100%;
-      max-width: 100%;
-      height: 539px;
-      border: 0;
-    }
-
     .faq-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -855,7 +794,6 @@
       .product-grid,
       .product.alt .product-grid,
       .shipping-card,
-      .order-card,
       .footer-grid {
         grid-template-columns: 1fr;
       }
@@ -876,8 +814,7 @@
       }
 
       .gallery-grid,
-      .faq-grid,
-      .steps {
+      .faq-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
@@ -919,7 +856,6 @@
 
       .gallery-grid,
       .faq-grid,
-      .steps,
       .board-options {
         grid-template-columns: 1fr;
       }
@@ -946,7 +882,6 @@
         <a href="#belt">Belt</a>
         <a href="#shop">Shop</a>
         <a href="#gallery">Gallery</a>
-        <a href="#custom">Custom Orders</a>
         <a href="#faq">FAQ</a>
         <a href="https://www.facebook.com/profile.php?id=61590886284562">Facebook</a>
       </div>
@@ -963,7 +898,7 @@
           <div class="button-row" aria-label="Shop and order links">
             <a class="button primary" href="https://pixelandpatchworkus.etsy.com">Shop Etsy</a>
             <a class="button secondary" href="https://www.ebay.com/usr/ghostworkslab">Shop eBay</a>
-            <a class="button ghost" href="https://form.jotform.com/261587044383058">Request Custom</a>
+            <a class="button ghost" href="mailto:charlie@ghostworkslab.com">Email Us</a>
           </div>
         </div>
         <div class="hero-art">
@@ -1067,7 +1002,7 @@
 
     <section class="pricing-disclaimer" aria-label="Pricing disclaimer">
       <div class="wrap pricing-card">
-        <p><strong>Pricing note:</strong> Prices listed directly on this site apply to purchases made through the custom order form. Etsy and eBay listings may be priced differently because marketplace fees, listing formats, and availability can vary.</p>
+        <p><strong>Pricing note:</strong> Product prices shown in the sections above are reference prices for direct Ghostworks Lab orders. Etsy, eBay, and shop listings may be priced differently because marketplace fees, listing formats, and availability can vary.</p>
       </div>
     </section>
 
@@ -1089,7 +1024,7 @@
       <div class="wrap">
         <p class="eyebrow">Shop</p>
         <h2>Ready-made gizmos and lab supplies.</h2>
-        <p class="section-intro">Browse available Ghostworks Lab items directly from the workshop store. For special requests, the custom order form is still the preferred way to start a build.</p>
+        <p class="section-intro">Browse available Ghostworks Lab items directly from the workshop store. For special requests, email the lab with the build details so availability and options can be reviewed.</p>
         <div class="shop-embed">
           <div id="my-store-137811008"></div>
           <div>
@@ -1172,46 +1107,6 @@
       </div>
     </section>
 
-    <section class="section order" id="custom">
-      <div class="wrap order-card">
-        <div>
-          <p class="eyebrow">Custom Orders</p>
-          <h2>Need a special build?</h2>
-          <p class="section-intro">Send a request with the prop type, available LED color choices, deadline, and any reference notes. After the details are reviewed, you will receive a custom quote and a PayPal invoice before work begins.</p>
-          <p class="custom-note">Customization is limited to the top 7 LEDs on the Belt Gizmo and the 16 LEDs around the static LED on the Frozen Empire-inspired Version 1 Pocket Gizmo. Other controls, layouts, and board availability are based on the current build design and stock.</p>
-          <div class="steps" aria-label="Custom order process">
-            <div class="step">
-              <strong>1. Submit</strong>
-              Share your build request and contact details.
-            </div>
-            <div class="step">
-              <strong>2. Quote</strong>
-              Get a price, timeline, and PayPal invoice.
-            </div>
-            <div class="step">
-              <strong>3. Build</strong>
-              Your custom prop electronics go to the workbench.
-            </div>
-          </div>
-        </div>
-        <div class="button-row">
-          <a class="button secondary" href="https://form.jotform.com/261587044383058">Start Request</a>
-          <a class="button ghost" href="mailto:charlie@ghostworkslab.com">Email Us</a>
-        </div>
-        <div class="form-embed">
-          <iframe
-            id="JotFormIFrame-261587044383058"
-            title="Ghostworks Lab Custom Gizmo Order Request"
-            onload="window.parent.scrollTo(0,0)"
-            allowtransparency="true"
-            allow="geolocation; microphone; camera; fullscreen; payment"
-            src="https://form.jotform.com/261587044383058"
-            scrolling="no">
-          </iframe>
-        </div>
-      </div>
-    </section>
-
     <section class="section" id="faq">
       <div class="wrap">
         <p class="eyebrow">FAQ</p>
@@ -1243,7 +1138,7 @@
           </details>
           <details>
             <summary>Where can I buy available items?</summary>
-            <p>Available ready-made items may be listed on Etsy or eBay. For custom builds, special requests, or anything not currently listed, the custom order form is preferred so all build details can be reviewed in one place.</p>
+            <p>Available ready-made items may be listed in the shop, on Etsy, or on eBay. For custom builds, special requests, or anything not currently listed, email Ghostworks Lab with the details so availability and options can be reviewed.</p>
           </details>
         </div>
       </div>
@@ -1260,18 +1155,14 @@
         <a href="https://pixelandpatchworkus.etsy.com">Etsy</a>
         <a href="https://www.ebay.com/usr/ghostworkslab">eBay</a>
         <a href="https://www.facebook.com/profile.php?id=61590886284562">Facebook</a>
-        <a href="https://form.jotform.com/261587044383058">Custom Form</a>
         <a href="mailto:charlie@ghostworkslab.com">Email</a>
       </div>
     </div>
   </footer>
-  <script src="https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js"></script>
   <script>
     if (window.location.protocol === "http:" || window.location.hostname === "ghostworkslab.com") {
       window.location.replace("https://www.ghostworkslab.com" + window.location.pathname + window.location.search + window.location.hash);
     }
-
-    window.jotformEmbedHandler("iframe[id='JotFormIFrame-261587044383058']", "https://form.jotform.com/");
   </script>
 </body>
 </html>
