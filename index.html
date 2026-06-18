@@ -1320,8 +1320,8 @@
   <script>
     const isProductionDomain = window.location.hostname === "ghostworkslab.com" || window.location.hostname === "www.ghostworkslab.com";
 
-    if (isProductionDomain && (window.location.protocol === "http:" || window.location.hostname === "www.ghostworkslab.com")) {
-      window.location.replace("https://ghostworkslab.com" + window.location.pathname + window.location.search + window.location.hash);
+    if (isProductionDomain && (window.location.protocol === "http:" || window.location.hostname === "ghostworkslab.com")) {
+      window.location.replace("https://www.ghostworkslab.com" + window.location.pathname + window.location.search + window.location.hash);
     }
 
     function scrollEcwidProductIntoView() {
