@@ -9,8 +9,11 @@
   <link rel="apple-touch-icon" href="logo.png">
   <style>
     :root {
-      --cream: #fff4d7;
-      --cream-2: #f8e7b9;
+      --cream: #ead4a4;
+      --cream-2: #cfb37b;
+      --khaki-light: #e1c993;
+      --khaki: #b99a62;
+      --khaki-dark: #7f653f;
       --ink: #111313;
       --ink-soft: #242828;
       --red: #df2b1f;
@@ -21,6 +24,13 @@
       --shadow: 0 18px 45px rgba(17, 19, 19, 0.22);
       --radius: 8px;
       --max-width: 1120px;
+      --ripstop-fabric:
+        linear-gradient(135deg, rgba(255, 246, 209, 0.34), rgba(126, 98, 50, 0.28)),
+        repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.14) 0 1px, rgba(111, 84, 42, 0.08) 1px 2px, transparent 2px 5px),
+        repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.12) 0 1px, rgba(95, 72, 36, 0.09) 1px 2px, transparent 2px 5px),
+        repeating-linear-gradient(0deg, transparent 0 37px, rgba(83, 64, 34, 0.2) 37px 39px, rgba(255, 239, 186, 0.18) 39px 40px, transparent 40px 78px),
+        repeating-linear-gradient(90deg, transparent 0 37px, rgba(83, 64, 34, 0.2) 37px 39px, rgba(255, 239, 186, 0.18) 39px 40px, transparent 40px 78px),
+        linear-gradient(180deg, var(--khaki-light), var(--khaki) 58%, #d8bf88);
     }
 
     * {
@@ -37,9 +47,10 @@
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       line-height: 1.6;
       background:
-        radial-gradient(circle at 18% 12%, rgba(120, 212, 35, 0.24), transparent 26rem),
-        radial-gradient(circle at 86% 6%, rgba(223, 43, 31, 0.18), transparent 24rem),
-        linear-gradient(180deg, var(--cream), #f3d99f 58%, var(--cream));
+        radial-gradient(circle at 18% 12%, rgba(120, 212, 35, 0.18), transparent 26rem),
+        radial-gradient(circle at 86% 6%, rgba(223, 43, 31, 0.14), transparent 24rem),
+        var(--ripstop-fabric);
+      background-attachment: fixed;
     }
 
     img {
@@ -56,7 +67,9 @@
       top: 0;
       z-index: 20;
       border-bottom: 3px solid var(--ink);
-      background: rgba(255, 244, 215, 0.94);
+      background:
+        linear-gradient(rgba(234, 212, 164, 0.92), rgba(234, 212, 164, 0.92)),
+        var(--ripstop-fabric);
       backdrop-filter: blur(14px);
     }
 
@@ -304,7 +317,9 @@
     .product {
       border-top: 4px solid var(--ink);
       border-bottom: 4px solid var(--ink);
-      background: var(--white);
+      background:
+        linear-gradient(rgba(255, 253, 244, 0.8), rgba(255, 253, 244, 0.8)),
+        var(--ripstop-fabric);
     }
 
     .product.alt {
@@ -613,14 +628,17 @@
     .shipping {
       border-bottom: 4px solid var(--ink);
       background:
-        linear-gradient(rgba(255, 253, 244, 0.9), rgba(255, 253, 244, 0.9)),
-        repeating-linear-gradient(-12deg, rgba(223, 43, 31, 0.18) 0 5px, transparent 5px 20px);
+        linear-gradient(rgba(255, 253, 244, 0.7), rgba(255, 253, 244, 0.7)),
+        repeating-linear-gradient(-12deg, rgba(223, 43, 31, 0.14) 0 5px, transparent 5px 20px),
+        var(--ripstop-fabric);
     }
 
     .pricing-disclaimer {
       padding: 42px 0;
       border-bottom: 4px solid var(--ink);
-      background: var(--cream-2);
+      background:
+        linear-gradient(rgba(207, 179, 123, 0.72), rgba(207, 179, 123, 0.72)),
+        var(--ripstop-fabric);
     }
 
     .pricing-card {
@@ -704,9 +722,10 @@
 
     .shop {
       background:
-        linear-gradient(rgba(255, 253, 244, 0.92), rgba(255, 253, 244, 0.92)),
-        radial-gradient(circle at 15% 18%, rgba(120, 212, 35, 0.34), transparent 32%),
-        radial-gradient(circle at 84% 8%, rgba(230, 42, 43, 0.18), transparent 28%);
+        linear-gradient(rgba(255, 253, 244, 0.74), rgba(255, 253, 244, 0.74)),
+        radial-gradient(circle at 15% 18%, rgba(120, 212, 35, 0.24), transparent 32%),
+        radial-gradient(circle at 84% 8%, rgba(230, 42, 43, 0.14), transparent 28%),
+        var(--ripstop-fabric);
     }
 
     .shop-embed {
@@ -720,8 +739,9 @@
 
     .gallery {
       background:
-        linear-gradient(rgba(255, 244, 215, 0.88), rgba(255, 244, 215, 0.88)),
-        repeating-linear-gradient(90deg, transparent 0 46px, rgba(17, 19, 19, 0.1) 46px 49px);
+        linear-gradient(rgba(255, 244, 215, 0.7), rgba(255, 244, 215, 0.7)),
+        repeating-linear-gradient(90deg, transparent 0 46px, rgba(17, 19, 19, 0.08) 46px 49px),
+        var(--ripstop-fabric);
     }
 
     .gallery-grid {
@@ -1298,7 +1318,9 @@
     </div>
   </footer>
   <script>
-    if (window.location.protocol === "http:" || window.location.hostname === "www.ghostworkslab.com") {
+    const isProductionDomain = window.location.hostname === "ghostworkslab.com" || window.location.hostname === "www.ghostworkslab.com";
+
+    if (isProductionDomain && (window.location.protocol === "http:" || window.location.hostname === "www.ghostworkslab.com")) {
       window.location.replace("https://ghostworkslab.com" + window.location.pathname + window.location.search + window.location.hash);
     }
 
