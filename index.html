@@ -413,6 +413,13 @@
       object-position: center;
     }
 
+    .product-photo a,
+    .board-card a {
+      display: block;
+      color: inherit;
+      text-decoration: none;
+    }
+
     .product-photo figcaption {
       margin: 0;
       padding: 12px 14px;
@@ -445,22 +452,65 @@
       font-weight: 900;
     }
 
+    .price-copy {
+      min-width: 0;
+    }
+
+    .price-copy span {
+      display: block;
+    }
+
+    .price-copy small {
+      display: block;
+      margin-top: 2px;
+      font-size: 0.78rem;
+      font-weight: 750;
+      opacity: 0.78;
+    }
+
     .product.alt .price-item {
       background: rgba(255, 253, 244, 0.08);
     }
 
-    .price-item span:first-child {
-      min-width: 0;
-    }
-
-    .price-item span:last-child {
+    .price-amount {
       white-space: nowrap;
       color: var(--red);
       font-size: 1.1rem;
     }
 
-    .product.alt .price-item span:last-child {
+    .product.alt .price-amount {
       color: var(--slime);
+    }
+
+    .price-link {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .price-link:hover,
+    .price-link:focus-visible {
+      color: var(--white);
+      background: var(--red);
+      outline: none;
+    }
+
+    .product.alt .price-link:hover,
+    .product.alt .price-link:focus-visible {
+      color: var(--ink);
+      background: var(--slime);
+    }
+
+    .product-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .product-actions .button {
+      min-height: 44px;
+      padding: 10px 14px;
+      font-size: 0.86rem;
     }
 
     .stock-note {
@@ -584,6 +634,38 @@
     .pricing-card p {
       margin-bottom: 0;
       font-weight: 850;
+    }
+
+    .disclaimer-section {
+      border-bottom: 4px solid var(--ink);
+      background:
+        linear-gradient(rgba(17, 19, 19, 0.94), rgba(17, 19, 19, 0.94)),
+        repeating-linear-gradient(45deg, rgba(120, 212, 35, 0.22) 0 5px, transparent 5px 18px);
+      color: var(--white);
+    }
+
+    .notice-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin: 28px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .notice-list li {
+      padding: 16px;
+      border: 3px solid rgba(255, 253, 244, 0.38);
+      border-radius: var(--radius);
+      background: rgba(255, 253, 244, 0.08);
+      font-weight: 760;
+    }
+
+    .notice-list strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--slime);
+      text-transform: uppercase;
     }
 
     .shipping-card {
@@ -814,7 +896,8 @@
       }
 
       .gallery-grid,
-      .faq-grid {
+      .faq-grid,
+      .notice-list {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
@@ -856,6 +939,7 @@
 
       .gallery-grid,
       .faq-grid,
+      .notice-list,
       .board-options {
         grid-template-columns: 1fr;
       }
@@ -919,40 +1003,60 @@
             <li>Custom LED color requests are available on the 16 perimeter LEDs around the static LED on Frozen Empire-inspired Version 1 Pocket Gizmos.</li>
           </ul>
           <div class="price-list" aria-label="Pocket Gizmo pricing">
-            <div class="price-item">
-              <span>RGB Pocket Gizmo</span>
-              <span>$139.99</span>
-            </div>
-            <div class="price-item">
-              <span>Version 1 Pocket Gizmo</span>
-              <span>$109.99</span>
-            </div>
-            <div class="price-item">
-              <span>Version 2 White Board Pocket Gizmo</span>
-              <span>$109.99</span>
-            </div>
-            <div class="price-item">
-              <span>Version 1 Pocket Gizmo DIY Kit</span>
-              <span>$49.99</span>
-            </div>
+            <a class="price-item price-link" href="https://www.ghostworkslab.com/#!/Ghostbusters-Frozen-Empire-Inspired-Pocket-Gizmo-RGB/p/842159410">
+              <span class="price-copy">
+                <span>RGB Pocket Gizmo</span>
+                <small>16 RGB LEDs, 15 patterns, fully assembled.</small>
+              </span>
+              <span class="price-amount">$129.99</span>
+            </a>
+            <a class="price-item price-link" href="https://www.ghostworkslab.com/#!/Ghostbusters-Frozen-Empire-Inspired-Version-1-Static-Color-LED-Black-Board/p/842137473">
+              <span class="price-copy">
+                <span>Version 1 Pocket Gizmo</span>
+                <small>Black board, static-color LEDs.</small>
+              </span>
+              <span class="price-amount">$109.99</span>
+            </a>
+            <a class="price-item price-link" href="https://www.ghostworkslab.com/#!/Ghostbusters-Frozen-Empire-Inspired-Version-2-Static-Color-LED-White-Board/p/842137474">
+              <span class="price-copy">
+                <span>Version 2 White Board Pocket Gizmo</span>
+                <small>White board, static-color LEDs.</small>
+              </span>
+              <span class="price-amount">$109.99</span>
+            </a>
+            <a class="price-item price-link" href="https://www.ghostworkslab.com/#!/Ghostbusters-Frozen-Empire-Inspired-Pocket-Gizmo-Kit/p/842156678">
+              <span class="price-copy">
+                <span>Pocket Gizmo DIY Kit</span>
+                <small>Choose black Version 1 or white Version 2 board.</small>
+              </span>
+              <span class="price-amount">$49.99</span>
+            </a>
           </div>
           <div class="board-options" aria-label="Pocket Gizmo board color options">
             <figure class="board-card">
-              <img src="assets/pocket-gizmo-black-board.jpeg" alt="Black Pocket Gizmo board with white LEDs lit">
+              <a href="https://www.ghostworkslab.com/#!/Ghostbusters-Frozen-Empire-Inspired-Version-1-Static-Color-LED-Black-Board/p/842137473">
+                <img src="assets/pocket-gizmo-black-board.jpeg" alt="Black Pocket Gizmo board with white LEDs lit">
+              </a>
               <figcaption>
                 <strong>Black board</strong>
                 <span>Customers can choose the black Version 1 board.</span>
               </figcaption>
             </figure>
             <figure class="board-card">
-              <img src="assets/pocket-gizmo-white-board.jpeg" alt="White Pocket Gizmo board with white LEDs lit">
+              <a href="https://www.ghostworkslab.com/#!/Ghostbusters-Frozen-Empire-Inspired-Version-2-Static-Color-LED-White-Board/p/842137474">
+                <img src="assets/pocket-gizmo-white-board.jpeg" alt="White Pocket Gizmo board with white LEDs lit">
+              </a>
               <figcaption>
                 <strong>White board</strong>
                 <span>Customers can choose the white Version 2 board.</span>
               </figcaption>
             </figure>
           </div>
-          <p class="stock-note">Pocket Gizmo board note: Version 1 and RGB Pocket Gizmo customers can choose either the black Version 1 board or the white Version 2 board when ordering. If a selected board color is unavailable, availability will be confirmed before invoicing.</p>
+          <p class="stock-note">Pocket Gizmo board note: Version 1 is listed as a black board and Version 2 is listed as a white board. The Pocket Gizmo DIY Kit listing allows customers to choose black Version 1 or white Version 2 when ordering. Product-page options and current stock are the final source of truth at checkout.</p>
+          <div class="product-actions" aria-label="Pocket Gizmo shop links">
+            <a class="button primary" href="https://www.ghostworkslab.com/#!/Ghostbusters-Frozen-Empire-Inspired-Pocket-Gizmo-RGB/p/842159410">View RGB Listing</a>
+            <a class="button secondary" href="https://www.ghostworkslab.com/#!/Ghostbusters-Frozen-Empire-Inspired-Pocket-Gizmo-Kit/p/842156678">View DIY Kit</a>
+          </div>
           <div class="tag-row" aria-label="Pocket Gizmo tags">
             <span class="tag">Handheld</span>
             <span class="tag">Light-up</span>
@@ -960,7 +1064,9 @@
           </div>
         </div>
         <figure class="product-photo">
-          <img src="assets/rgb-pocket-gizmo-main.jpeg" alt="RGB Pocket Gizmo with multicolor lights active">
+          <a href="https://www.ghostworkslab.com/#!/Ghostbusters-Frozen-Empire-Inspired-Pocket-Gizmo-RGB/p/842159410">
+            <img src="assets/rgb-pocket-gizmo-main.jpeg" alt="RGB Pocket Gizmo with multicolor lights active">
+          </a>
           <figcaption>RGB Pocket Gizmo</figcaption>
         </figure>
       </div>
@@ -969,7 +1075,9 @@
     <section class="section product alt" id="belt">
       <div class="wrap product-grid">
         <figure class="product-photo">
-          <img src="assets/ghostbusters-ii-inspired-belt-gizmo-main.jpeg" alt="Ghostbusters II inspired Belt Gizmo with lights active">
+          <a href="https://www.ghostworkslab.com/#!/Ghostbusters-II-Inspired-Belt-Gizmo/p/842167811">
+            <img src="assets/ghostbusters-ii-inspired-belt-gizmo-main.jpeg" alt="Ghostbusters II inspired Belt Gizmo with lights active">
+          </a>
           <figcaption>Ghostbusters II Inspired Belt Gizmo</figcaption>
         </figure>
         <div>
@@ -982,14 +1090,24 @@
             <li>Custom LED color requests are available for the top 7 LEDs only.</li>
           </ul>
           <div class="price-list" aria-label="Belt Gizmo pricing">
-            <div class="price-item">
-              <span>Belt Gizmo</span>
-              <span>$139.99</span>
-            </div>
-            <div class="price-item">
-              <span>DIY Belt Gizmo Kit</span>
-              <span>$79.99</span>
-            </div>
+            <a class="price-item price-link" href="https://www.ghostworkslab.com/#!/Ghostbusters-II-Inspired-Belt-Gizmo/p/842167811">
+              <span class="price-copy">
+                <span>Belt Gizmo</span>
+                <small>Fully assembled, top 7 LED color selection.</small>
+              </span>
+              <span class="price-amount">$139.99</span>
+            </a>
+            <a class="price-item price-link" href="https://www.ghostworkslab.com/#!/Ghostbusters-II-Inspired-Belt-Gizmo/p/842172784">
+              <span class="price-copy">
+                <span>DIY Belt Gizmo Kit</span>
+                <small>DIY kit listing, assembly required.</small>
+              </span>
+              <span class="price-amount">$79.99</span>
+            </a>
+          </div>
+          <div class="product-actions" aria-label="Belt Gizmo shop links">
+            <a class="button secondary" href="https://www.ghostworkslab.com/#!/Ghostbusters-II-Inspired-Belt-Gizmo/p/842167811">View Belt Listing</a>
+            <a class="button ghost" href="https://www.ghostworkslab.com/#!/Ghostbusters-II-Inspired-Belt-Gizmo/p/842172784">View DIY Kit</a>
           </div>
           <div class="tag-row" aria-label="Belt Gizmo tags">
             <span class="tag">Wearable</span>
@@ -1002,7 +1120,23 @@
 
     <section class="pricing-disclaimer" aria-label="Pricing disclaimer">
       <div class="wrap pricing-card">
-        <p><strong>Pricing note:</strong> Product prices shown in the sections above are reference prices for direct Ghostworks Lab orders. Etsy, eBay, and shop listings may be priced differently because marketplace fees, listing formats, and availability can vary.</p>
+        <p><strong>Pricing note:</strong> Product prices shown on this page are intended to match the Ecwid shop listings. The individual Ecwid product listing is the final source of truth for current price, stock, options, lead time, and checkout details. Etsy and eBay listings may be priced differently because marketplace fees, listing formats, and availability can vary.</p>
+      </div>
+    </section>
+
+    <section class="section disclaimer-section" id="product-notes">
+      <div class="wrap">
+        <p class="eyebrow">Product Notes</p>
+        <h2>Before you buy.</h2>
+        <p class="section-intro">Ghostworks Lab items are small-batch fan-made prop electronics. Please read the full Ecwid product listing before checkout, especially for options, fitment, included parts, and lead times.</p>
+        <ul class="notice-list">
+          <li><strong>DIY kits</strong>DIY kits are not finished products. Assembly, soldering, wiring, testing, troubleshooting, installation, and fitment are the buyer's responsibility. Tools, soldering supplies, and any unlisted extras are not included.</li>
+          <li><strong>Power and batteries</strong>Batteries and battery packs are not included unless the specific product listing says they are included or offers them as a selected option. Buyers are responsible for using a compatible power source.</li>
+          <li><strong>Fitment</strong>Confirm board, cable, holster, pocket, pouch, and display fitment before ordering. Belt Gizmo holsters are not included unless a listing specifically states otherwise.</li>
+          <li><strong>Handmade variation</strong>Each item is assembled in small batches, so minor cosmetic differences, print texture, wiring placement, and finish variation may occur from unit to unit.</li>
+          <li><strong>Use and modification</strong>These props are for cosplay, display, and collecting. Any buyer modification, glue application, forced fitment, wiring change, installation change, misuse, or repair attempt is done at the buyer's own risk.</li>
+          <li><strong>Fan-made props</strong>Items are Ghostbusters-inspired fan-made prop electronics. They are not official, licensed, endorsed, sponsored, safety equipment, toys, or advertised as screen accurate.</li>
+        </ul>
       </div>
     </section>
 
@@ -1114,7 +1248,7 @@
         <div class="faq-grid">
           <details>
             <summary>Are these ready to ship?</summary>
-            <p>Some items may be ready-made, while custom pieces are built after the quote and invoice are approved. Product listings will include the current timing.</p>
+            <p>Availability and lead time are shown on the individual Ecwid product listing. Some items may be ready-made, while small-batch builds may require assembly and testing time before shipment.</p>
           </details>
           <details>
             <summary>Can I request custom LED colors?</summary>
@@ -1125,20 +1259,24 @@
             <p>Available features vary by build. Common options include blinking LEDs, switches, knobs, battery-powered lighting, and other prop-style electronics.</p>
           </details>
           <details>
-            <summary>How do PayPal invoices work?</summary>
-            <p>After your request is reviewed, you will receive a PayPal invoice for the approved amount. Work begins once the invoice is paid.</p>
+            <summary>How do checkout and special requests work?</summary>
+            <p>Available items can be purchased through the Ecwid shop. For special requests or anything not listed, email Ghostworks Lab with the build details so options, price, and timing can be reviewed.</p>
           </details>
           <details>
             <summary>How much is shipping?</summary>
-            <p>A flat shipping rate of $18 is included for all orders. If multiple items are ordered at once, shipping may be combined when possible and reflected in the final quote or invoice.</p>
+            <p>A flat shipping rate of $18 is included for all orders unless the product listing or checkout states otherwise. If multiple items are ordered at once, shipping may be combined when possible.</p>
+          </details>
+          <details>
+            <summary>What should I know before buying a DIY kit?</summary>
+            <p>DIY kits require buyer assembly, soldering, wiring, testing, troubleshooting, installation, and fitment. Tools and soldering supplies are not included, and buyer assembly or modification is done at the buyer's own risk.</p>
           </details>
           <details>
             <summary>Are these toys or safety equipment?</summary>
-            <p>No. These are custom fan-made prop electronics for display, cosplay, and collecting. They are not tools, safety devices, or equipment for real paranormal investigation.</p>
+            <p>No. These are fan-made prop electronics for display, cosplay, and collecting. They are not toys, tools, safety devices, or equipment for real paranormal investigation.</p>
           </details>
           <details>
             <summary>Where can I buy available items?</summary>
-            <p>Available ready-made items may be listed in the shop, on Etsy, or on eBay. For custom builds, special requests, or anything not currently listed, email Ghostworks Lab with the details so availability and options can be reviewed.</p>
+            <p>Available items are listed in the Ecwid shop on this page and may also appear on Etsy or eBay. The individual product listing is the final source of truth for price, stock, options, and checkout details.</p>
           </details>
         </div>
       </div>
@@ -1163,6 +1301,17 @@
     if (window.location.protocol === "http:" || window.location.hostname === "ghostworkslab.com") {
       window.location.replace("https://www.ghostworkslab.com" + window.location.pathname + window.location.search + window.location.hash);
     }
+
+    function scrollEcwidProductIntoView() {
+      if (window.location.hash.startsWith("#!/")) {
+        window.setTimeout(function () {
+          document.getElementById("shop")?.scrollIntoView({ block: "start" });
+        }, 600);
+      }
+    }
+
+    window.addEventListener("load", scrollEcwidProductIntoView);
+    window.addEventListener("hashchange", scrollEcwidProductIntoView);
   </script>
 </body>
 </html>
