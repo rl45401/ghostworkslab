@@ -503,6 +503,47 @@
       font-size: 0.86rem;
     }
 
+    .partner-callout {
+      display: grid;
+      grid-template-columns: minmax(96px, 140px) minmax(0, 1fr);
+      gap: 16px;
+      align-items: center;
+      margin-top: 24px;
+      padding: 14px;
+      border: 3px solid var(--ink);
+      border-radius: var(--radius);
+      background: var(--cream);
+      box-shadow: 5px 5px 0 var(--ink);
+      color: var(--ink);
+    }
+
+    .partner-callout img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border: 3px solid var(--ink);
+      border-radius: var(--radius);
+      background: var(--white);
+    }
+
+    .partner-callout p {
+      margin-bottom: 10px;
+      font-weight: 800;
+    }
+
+    .partner-callout strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 1rem;
+      text-transform: uppercase;
+    }
+
+    .partner-callout .button {
+      min-height: 40px;
+      padding: 8px 12px;
+      font-size: 0.78rem;
+    }
+
     .stock-note {
       margin: 18px 0 0;
       padding: 14px 16px;
@@ -927,6 +968,10 @@
         grid-template-columns: 1fr;
       }
 
+      .partner-callout {
+        grid-template-columns: 1fr;
+      }
+
       .lab-panel {
         min-height: 260px;
       }
@@ -1092,6 +1137,14 @@
             <a class="button secondary" href="#!/Ghostbusters-II-Inspired-Belt-Gizmo/p/842167811">View Belt Listing</a>
             <a class="button ghost" href="#!/Ghostbusters-II-Inspired-Belt-Gizmo/p/842172784">View DIY Kit</a>
           </div>
+          <aside class="partner-callout" aria-label="Compatible Karolian Dry Goods holster">
+            <img src="assets/karolian-belt-gizmo-holster.png" alt="Karolian Dry Goods black belt holster on a khaki belt">
+            <div>
+              <strong>Compatible Holster</strong>
+              <p>The Karolian Dry Goods Belt Gizmo holster is designed to fit the Ghostworks Lab GBII-inspired Belt Gizmo for a cleaner utility-belt setup. Sold separately through Karolian Dry Goods on Etsy.</p>
+              <a class="button secondary" href="https://www.etsy.com/listing/1603331441/ghostbusters-1-style-belt-gizmo-holster?sr_prefetch=1&amp;pf_from=shop_home&amp;ref=shop_home_active_6&amp;frs=1&amp;sca=1&amp;logging_key=2beb012bb29398059a9363491b72fe442c74b635%3A1603331441" target="_blank" rel="noopener">View Holster</a>
+            </div>
+          </aside>
           <div class="tag-row" aria-label="Belt Gizmo tags">
             <span class="tag">Wearable</span>
             <span class="tag">Customizable</span>
