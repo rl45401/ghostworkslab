@@ -1,0 +1,193 @@
+SHIPPING AND PAYMENT INFORMATION
+
+Last Updated: June 18, 2026
+
+This page explains how GhostWorks Lab handles order processing, shipping, delivery, payment, damages, lost packages, and related customer responsibilities.
+
+GhostWorks Lab is a small-batch fan-made prop electronics shop based in Salt Lake City, Utah. Products are made, assembled, prepared, or packed in small batches, so processing times may vary depending on the item ordered.
+
+Order Processing Time
+Most GhostWorks Lab products have a lead time of up to 2 to 3 weeks unless otherwise stated in the product listing.
+
+This lead time may include product assembly, kit preparation, programming, testing, packing, and preparing the order for shipment. Lead time does not include carrier transit time after the package has been accepted by the shipping carrier.
+
+Because GhostWorks Lab products are handmade, small-batch, and often prepared to order, processing may take the full stated lead time. If an order is expected to go beyond the original stated timeframe, GhostWorks Lab will make reasonable efforts to update the customer.
+
+Shipping Origin
+Orders ship from Salt Lake City, Utah.
+
+Shipping Options
+Available shipping options may vary by product, destination, platform, and checkout method.
+
+Shipping options may be shown during checkout through GhostWorks Lab, Ecwid, Etsy, eBay, PayPal, Jotform, or another connected sales platform.
+
+GhostWorks Lab may use USPS, UPS, FedEx, or another shipping carrier depending on package size, destination, service availability, cost, and platform requirements.
+
+Supported Shipping Zones
+GhostWorks Lab primarily ships within the United States.
+
+International shipping may be available on select products or through select platforms, depending on destination, item restrictions, carrier availability, and checkout settings.
+
+If international shipping is not available during checkout, the customer may contact GhostWorks Lab before ordering to ask whether an exception can be made. International shipping is not guaranteed.
+
+Shipping Costs
+Shipping costs are calculated or displayed at checkout unless otherwise stated in the listing.
+
+Shipping costs may vary based on package size, weight, destination, carrier rates, marketplace settings, insurance, and selected shipping method.
+
+If a product listing states that shipping is included or free, that applies only to the specific item and shipping zone shown in that listing.
+
+Customers are responsible for reviewing shipping costs before completing checkout.
+
+Delivery Times
+Estimated delivery times are provided by the shipping carrier or marketplace platform and are not guaranteed by GhostWorks Lab.
+
+Carrier transit time begins after the order has been completed, packed, and handed to the shipping carrier.
+
+GhostWorks Lab is not responsible for delays caused by USPS, UPS, FedEx, weather events, incorrect addresses, customs, holidays, postal disruptions, package routing issues, or other circumstances outside GhostWorks Lab’s control.
+
+Shipping Delays
+If an order is expected to ship later than the stated lead time, GhostWorks Lab will make reasonable efforts to notify the customer.
+
+If applicable law or platform policy requires customer consent for a delay, cancellation options, or refund options, GhostWorks Lab will follow the applicable requirement.
+
+Address Accuracy
+Customers are responsible for providing a complete and accurate shipping address at checkout.
+
+GhostWorks Lab is not responsible for packages shipped to an incorrect address provided by the customer.
+
+If an order is returned due to an incorrect address, incomplete address, refusal, failed delivery, or customer error, the customer may be responsible for additional shipping costs before the order can be reshipped.
+
+Lost Packages
+If tracking shows that a package is delayed, missing, or lost in transit, the customer should contact GhostWorks Lab so the issue can be reviewed.
+
+GhostWorks Lab may assist with filing a claim or inquiry with the shipping carrier when appropriate. The customer may be required to provide written confirmation, photos, delivery details, or other information needed for the claim.
+
+GhostWorks Lab is not responsible for carrier loss, theft after delivery, porch piracy, incorrect delivery scans, or delivery issues outside GhostWorks Lab’s control. Any replacement, repair, refund, or other resolution for lost packages will be handled on a case-by-case basis at the discretion of GhostWorks Lab and subject to carrier claim results, platform policy, and applicable law.
+
+Damaged Packages
+If an item arrives damaged, the customer must contact GhostWorks Lab within 24 hours of delivery.
+
+The customer must keep the product, shipping box, packing material, label, and all packaging exactly as received until the issue has been reviewed. The customer may be asked to provide photos or video of the damaged item, packaging, shipping label, and any visible damage.
+
+Failure to contact GhostWorks Lab within 24 hours of delivery or failure to keep the packaging may limit or prevent GhostWorks Lab from assisting with a carrier claim, repair, replacement, or other resolution.
+
+Returns
+All sales are final.
+
+Returns are not accepted unless GhostWorks Lab specifically approves an exception in writing or unless required by applicable law or platform policy.
+
+Because many GhostWorks Lab products are handmade, small-batch, assembled to order, customized, electronics-based, or DIY kits, returns are generally not accepted.
+
+Exchanges
+Exchanges are not guaranteed.
+
+If there is a verified issue with an item, GhostWorks Lab may offer troubleshooting support, repair, replacement, partial refund, or another resolution as deemed appropriate by GhostWorks Lab.
+
+Cancellations
+Cancellations are not accepted once an order has been placed, except where required by applicable law or platform policy.
+
+Customers are responsible for reviewing product details, lead times, power requirements, fitment notes, color selections, board selections, battery pack options, and shipping information before placing an order.
+
+Refunds and Partial Refunds
+Refunds are not guaranteed.
+
+Partial refunds may be offered on a case-by-case basis at the sole discretion of GhostWorks Lab. A partial refund may depend on the product, issue, order status, customer communication, item condition, platform rules, and whether the item was used, modified, damaged, incorrectly powered, incorrectly assembled, or altered after delivery.
+
+Repairs and Replacements
+If there is an issue with an item, GhostWorks Lab may offer a repair or replacement as deemed necessary by GhostWorks Lab.
+
+The customer may be asked to provide photos, videos, troubleshooting details, order information, and a description of the issue.
+
+GhostWorks Lab reserves the right to determine whether an issue qualifies for repair, replacement, troubleshooting support, partial refund, or no coverage.
+
+Damage caused by improper assembly, incorrect wiring, reversed polarity, incorrect battery use, modified battery packs, soldering errors, forced fitment, glue application, misuse, water damage, impact damage, unauthorized modification, or installation error may not qualify for repair, replacement, refund, or warranty coverage.
+
+90 Day Limited Warranty
+Eligible GhostWorks Lab purchases include a 90 day limited warranty unless otherwise stated in the product listing.
+
+The warranty begins on the delivery date shown by carrier tracking.
+
+The warranty covers defects in workmanship or failure under normal intended cosplay, display, and prop use, as determined by GhostWorks Lab.
+
+The warranty does not cover improper installation, buyer assembly mistakes, soldering mistakes, incorrect wiring, reversed polarity, incorrect voltage, modified batteries, unsafe power supplies, battery failure, short circuits, water damage, impact damage, glue damage, removal damage, forced fitment, unauthorized repairs, or buyer modifications.
+
+Warranty service may include troubleshooting support, repair, replacement, or another remedy as determined by GhostWorks Lab.
+
+Battery and Power Supply Notice
+Some GhostWorks Lab products require specific power sources or battery setups.
+
+If a customer chooses to use their own rechargeable USB battery pack, they should be aware that many phone-style power banks include an automatic shutoff feature. Because some prop electronics draw low current, these power banks may shut off during use because they do not detect enough current draw.
+
+For best results, customers should use the included battery pack option when available, a TalentCell-style rechargeable battery pack, or another power source designed for low-current electronics that does not automatically shut off during use.
+
+Modifying TalentCell-style battery packs, rechargeable packs, USB cables, battery packs, or power supplies is discouraged. Battery or power modifications may void warranty coverage and are done entirely at the customer’s own risk.
+
+GhostWorks Lab is not responsible for damage caused by incorrect power supplies, reversed polarity, modified batteries, overvoltage, undervoltage, short circuits, unsafe wiring, or improper battery use.
+
+DIY Kit Responsibility
+DIY kits require customer assembly.
+
+Customers are responsible for soldering, wiring, cable construction, installation, testing, troubleshooting, and following the included instructions.
+
+Soldering tools, solder, wire strippers, cutters, heat sources, clamps, helping hands, safety gear, and other assembly tools are not included unless specifically stated in the product listing.
+
+For kits that include materials such as phone cord, heat shrink tubing, wire, or connectors, the customer is responsible for properly cutting, stripping, soldering, insulating, heat shrinking, and testing the cable or wiring before use.
+
+If the customer has questions, they should contact GhostWorks Lab before completing the build. Damage caused by improper assembly or failure to follow instructions is the customer’s responsibility.
+
+Payment Options
+Accepted payment methods may vary depending on where the customer completes checkout.
+
+GhostWorks Lab may accept payment through:
+
+Ecwid checkout
+
+PayPal
+
+Etsy Payments
+
+eBay checkout
+
+Jotform payment forms
+
+Credit or debit card options offered by the checkout platform
+
+Other payment methods shown during checkout
+
+Available payment methods are controlled partly by the platform used for checkout. Customers should review the available payment options at the time of purchase.
+
+Payment Requirements
+Payment must be completed before an order is prepared, assembled, packed, or shipped.
+
+Orders are not considered confirmed until payment has cleared through the applicable checkout platform.
+
+If payment fails, is reversed, is held, is flagged, or is not completed, GhostWorks Lab may delay, cancel, or refuse the order where permitted by law and platform policy.
+
+Payment Security
+Payment information is processed by third-party payment platforms such as Ecwid, PayPal, Etsy, eBay, Jotform, or their connected processors.
+
+GhostWorks Lab does not directly store full credit card numbers, bank account numbers, or complete payment credentials.
+
+Customers should review the privacy and security policies of the checkout platform they use.
+
+Sales Tax
+Sales tax may be calculated and collected at checkout depending on the customer’s location, the platform used, and applicable tax rules.
+
+Marketplace platforms such as Etsy and eBay may collect and remit sales tax according to their own policies and legal requirements.
+
+Customs, Duties, and Import Fees
+For international orders, the customer is responsible for any customs duties, import taxes, VAT, brokerage fees, handling fees, or other charges required by the destination country.
+
+GhostWorks Lab is not responsible for customs delays, import fees, rejected customs forms, confiscated packages, or destination-country restrictions.
+
+Contact Information
+For shipping questions, payment questions, damaged package claims, order issues, warranty questions, or support requests, contact:
+
+GhostWorks Lab
+
+Salt Lake City, Utah
+
+Website: www.ghostworkslab.com
+
+Email: Charlie@ghostworkslab.com
